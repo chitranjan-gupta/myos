@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html, application/json; charset= utf-8" />
+<meta charset="utf-8">
+
+<head>
+    <title>My Audio Player</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <img class="album" src="image.png">
+        <div id="name">My MP3</div>
+        <div class="progress">
+            <div class="progress__filled"></div>
+        </div>
+        <div id="timenow">00:00</div>
+        <div id="totaltime">00:00</div>
+
+        <input class="in" type="file" accept="audio/*" onchange="myfile(event)" />
+
+        <div class="play" onclick="tPlay()"></div>
+        <div class="pause" onclick="tPause()"></div>
+
+        <div class="next">
+            <div class="next1"></div>
+            <div class="next2"></div>
+        </div>
+        <div class="previous">
+            <div class="previous1"></div>
+            <div class="previous2"></div>
+        </div>
+        <div class="backward">
+            <div class="back1"></div>
+            <div class="back2"></div>
+        </div>
+        <div class="forward">
+            <div class="for1"></div>
+            <div class="for2"></div>
+        </div>
+        <input type="range" name="volume" class="player_slider" min="0" max="1" step="0.05" value="1">
+        <audio id="audi"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

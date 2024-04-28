@@ -1,0 +1,37 @@
+#calendar {
+	position: absolute;
+	border: 1px solid;
+}
+
+.monthPre {
+	color: gray;
+	text-align: center;
+}
+
+.monthNow {
+	color: blue;
+	text-align: center;
+}
+
+.dayNow {
+	border: 2px solid black;
+	color: #9370DB;
+	text-align: center;
+}
+
+.calendar td {
+	htmlContent: 2px;
+	width: 40px;
+}
+
+.monthNow th {
+	background-color: #008B8B;
+	color: #00FFFF;
+	text-align: center;
+}
+
+.dayNames {
+	background: #E9967A;
+	color: #FF1493;
+	text-align: center;
+}

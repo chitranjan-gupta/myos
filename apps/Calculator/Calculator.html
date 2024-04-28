@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form class="cal" onsubmit="return false">
+        <input type="text" id="display">
+        </br>
+        <div id="butt">
+            <button id="butClear" onclick='clea("")'>Clear</button>
+            </br>
+            <button id="but1" onclick='valu("1")'>1</button>
+            <button id="but2" onclick='valu("2")'>2</button>
+            <button id="but3" onclick='valu("3")'>3</button>
+            <button id="butplus" onclick='valu("+")'>+</button>
+            </br>
+            <button id="but4" onclick='valu("4")'>4</button>
+            <button id="but5" onclick='valu("5")'>5</button>
+            <button id="but6" onclick='valu("6")'>6</button>
+            <button id="but-" onclick='valu("-")'>--</button>
+            </br>
+            <button id="but7" onclick='valu("7")'>7</button>
+            <button id="but8" onclick='valu("8")'>8</button>
+            <button id="but9" onclick='valu("9")'>9</button>
+            <button id="butmul" onclick='valu("*")'>*</button>
+            </br>
+            <button id="but0" onclick='valu("0")'>0</button>
+            <button id="butpoint" onclick='valu(".")'>.</button>
+            <button id="butdiv" onclick='valu("/")'>/</button>
+            <button id="butplmi" onclick='valu("-")'>+/-</button>
+            <button id="butequaL" onclick="but()">=</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

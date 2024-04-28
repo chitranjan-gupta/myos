@@ -1,0 +1,8 @@
+{
+   "name":"Browser",
+   "icon":"icons/Googlechrome.png",
+   "windows":"apps/browser.html",
+   "windows_width":"500",
+   "windows_height":"450"
+}
+   

@@ -1,0 +1,257 @@
+.cal {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	border: 5px solid black;
+	width: 250px;
+	height: 400px;
+}
+
+.cal #display {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 246px;
+	height: 74px;
+	border: 2px solid pink;
+	font-size: 30px;
+}
+
+.cal #butt {
+	position: absolute;
+	top: 20%;
+	left: -1%;
+	width: 250px;
+	height: 320px;
+	border: 2px solid black;
+}
+
+.cal #butt #butClear {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 250px;
+	height: 40px;
+	font-size: 35px;
+}
+
+.cal #butt #butClear:hover {
+	background: red;
+}
+
+.cal #butt #but1 {
+	position: absolute;
+	top: 12.5%;
+	left: 0%;
+	width: 66px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but1:hover {
+	background: blue;
+}
+
+.cal #butt #but2 {
+	position: absolute;
+	top: 12.5%;
+	left: 26.5%;
+	width: 66px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but2:hover {
+	background: lightblue;
+}
+
+.cal #butt #but3 {
+	position: absolute;
+	top: 12.5%;
+	left: 53%;
+	width: 66px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but3:hover {
+	background: lime;
+}
+
+.cal #butt #butplus {
+	position: absolute;
+	top: 12.5%;
+	left: 79.5%;
+	width: 52px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #butplus:hover {
+	background: violet;
+}
+
+.cal #butt #but4 {
+	position: absolute;
+	top: 31.5%;
+	left: 0%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but4:hover {
+	background: purple;
+}
+
+.cal #butt #but5 {
+	position: absolute;
+	top: 31.5%;
+	left: 26.5%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but5:hover {
+	background: yellow;
+}
+
+.cal #butt #but6 {
+	position: absolute;
+	top: 31.5%;
+	left: 53%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but6:hover {
+	background: pink;
+}
+
+.cal #butt #but- {
+	position: absolute;
+	top: 31.5%;
+	left: 79.8%;
+	width: 51px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but-:hover {
+	background: Orange;
+}
+
+.cal #butt #but7 {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but7:hover {
+	background: #FF7F50;
+}
+
+.cal #butt #but8 {
+	position: absolute;
+	top: 50%;
+	left: 26.5%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but8:hover {
+	background: #8DBC8F;
+}
+
+.cal #butt #but9 {
+	position: absolute;
+	top: 50%;
+	left: 53%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but9:hover {
+	background: #2F4F4F;
+}
+
+.cal #butt #butmul {
+	position: absolute;
+	top: 50%;
+	left: 79.8%;
+	width: 51px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #butmul:hover {
+	background: #696969;
+}
+
+.cal #butt #but0 {
+	position: absolute;
+	top: 69%;
+	left: 0%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #but0:hover {
+	background: #FFFAF0;
+}
+
+.cal #butt #butpoint {
+	position: absolute;
+	top: 69%;
+	left: 26.5%;
+	width: 66.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #butpoint:hover {
+	background: #F0E68C;
+}
+
+.cal #butt #butdiv {
+	position: absolute;
+	top: 69%;
+	left: 79.5%;
+	width: 51.5px;
+	height: 60px;
+	font-size: 50px;
+}
+
+.cal #butt #butplmi {
+	position: absolute;
+	top: 69%;
+	left: 53%;
+	width: 66px;
+	height: 60px;
+	font-size: 40px;
+}
+
+.cal #butt #butplmi:hover {
+	background: #F08080;
+}
+
+.cal #butt #butequaL {
+	position: absolute;
+	top: 87.5%;
+	left: 0%;
+	width: 250px;
+	height: 39px;
+	font-size: 40px;
+}
+
+.cal #butt #butequaL:hover {
+	background: green;
+}

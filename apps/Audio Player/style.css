@@ -1,0 +1,277 @@
+#name {
+    position: relative;
+    top: 198px;
+    left: 48px;
+    width: 148px;
+    height: 34px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.lace {
+    position: absolute;
+    top: 71%;
+    left: 9%;
+    font-size: 30px;
+}
+
+.box {
+    position: fixed;
+    background-color: #543d5f;
+    top: 0%;
+    left: 0%;
+    width: 256px;
+    height: 476px;
+    padding: 0px;
+    margin: 0px;
+    border: solid 1px #543d5f;
+    border-radius: 5%;
+    box-shadow: 1px 1px 6px 0px #0e0910;
+}
+
+.album {
+    position: absolute;
+    width: 156px;
+    top: 3%;
+    left: 18%;
+    height: 160px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px 0px #0d0510;
+}
+
+.progress {
+    top: 47%;
+    left: 4%;
+    flex: 10;
+    width: 230px;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 3px;
+    transition: height 0.3s;
+    background: rgba(9, 199, 245, 0.5);
+    cursor: pointer;
+}
+
+.progress__filled {
+    width: 50%;
+    background: #14d851;
+    flex: 0;
+    flex-basis: 0%;
+}
+
+.in {
+    position: absolute;
+    top: 61.5%;
+    left: 4.0%;
+}
+
+.box #audi {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+
+.play {
+    position: relative;
+    top: 54%;
+    left: 45%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 13px 0px 16px 25px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+}
+
+.player_slider {
+    position: absolute;
+    top: 92%;
+    left: 19%;
+    width: 160px;
+    height: 3px;
+    cursor: pointer;
+}
+
+#timenow {
+    position: relative;
+    color: #ffffff40;
+    top: 240px;
+    left: 9px;
+}
+
+#totaltime {
+    position: relative;
+    color: #ffffff40;
+    top: 222px;
+    left: 203px;
+}
+
+.pause {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    top: 54%;
+    left: 45%;
+    border-style: double;
+    border-width: 0px 0px 0px 25px;
+    border-color: white;
+    display: none;
+    cursor: pointer;
+}
+
+.next {
+    position: relative;
+    top: 55%;
+    left: 85%;
+    height: 20px;
+    cursor: pointer;
+}
+
+.next1 {
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    border-style: solid;
+    border-width: 0px 0px 0px 3px;
+    border-color: white;
+    cursor: pointer;
+    left: 6%;
+    top: 2px;
+}
+
+.next2 {
+    position: absolute;
+    width: 25px;
+    top: 0%;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+}
+
+.previous {
+    position: relative;
+    top: 51%;
+    left: 4%;
+    cursor: pointer;
+}
+
+.previous1 {
+    position: absolute;
+    width: 25px;
+    top: 0%;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+    transform: rotate(180deg);
+}
+
+.previous2 {
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    border-style: solid;
+    border-width: 0px 0px 0px 3px;
+    border-color: white;
+    cursor: pointer;
+    left: 3%;
+    top: 3px;
+}
+
+.backward {
+    position: relative;
+    top: 51%;
+    left: 18%;
+    cursor: pointer;
+}
+
+.back1 {
+    position: relative;
+    width: 25px;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+    transform: rotate(180deg);
+}
+
+.back2 {
+    position: relative;
+    width: 25px;
+    top: -19px;
+    left: 6%;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+    transform: rotate(180deg);
+}
+
+.forward {
+    position: relative;
+    top: 43%;
+    left: 70%;
+    cursor: pointer;
+}
+
+.for1 {
+    position: relative;
+    width: 25px;
+    top: 0%;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+}
+
+.for2 {
+    position: relative;
+    width: 25px;
+    top: -19px;
+    left: -6%;
+    height: 19px;
+    text-align: center;
+    padding: 0px;
+    border-style: solid;
+    cursor: pointer;
+    margin: 0px;
+    border-width: 10px 0px 9px 15px;
+    border-color: transparent transparent transparent white;
+    box-sizing: border-box;
+}
+
+.in {
+    display: block;
+}

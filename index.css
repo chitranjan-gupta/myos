@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#loadingbody {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #fff url('favicon.ico') no-repeat center;
+    z-index: 99999;
+}
+
+#showr {
+    position: absolute;
+    top: 96%;
+    right: 40%;
+}
+
+#installer {
+    background-color: light;
+    border: #999 3px solid;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 600px;
+    height: 300px;
+    display: none;
+}
+
+#insicon {
+    background: White;
+    border: Black 2px solid;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 72px;
+    height: 72px;
+}
+
+#install {
+    position: absolute;
+    top: 85%;
+    left: 80%;
+    width: 110px;
+    height: 30px;
+    font-size: 20px;
+    background-color: white;
+}
+
+#namein {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background: white;
+    font-size: 30px;
+    text-align: left;
+    width: 400px;
+    border-bottom: black 2px solid;
+}
+
+#installing {
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    display: none;
+    font-size: 40px;
+    color: black;
+}
+
+#exitinstall {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 20px;
+    height: 20px;
+    border: 2px #999 solid;
+    text-align: center;
+    cursor: arrow;
+}
+
+#exitinstall:hover {
+    background-color: red;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: light;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bdb8b8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#recent {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    width: 380px;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    z-index: 1;
+}
+
+#appview {
+    position: relative;
+    left: 1.5%;
+    width: 345px;
+    height: 150px;
+    margin-top: 15px;
+}
+
+#appscreen {
+    position: relative;
+    top: 0%;
+    left: 25%;
+    width: 250px;
+    height: 150px;
+    border: 2px solid #0084F0;
+    box-shadow: 0 0 30px 3px #808080;
+}
+
+#appname {
+    position: relative;
+    top: 40%;
+    left: 0%;
+    width: 90px;
+    height: 50px;
+    color: #FFFFFF;
+    border-bottom: 1px solid #BABABA;
+}
+
+#nameapp {
+    position: relative;
+    color: white;
+    left: 0%;
+    bottom: -16px;
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html, application/json; charset= utf-8" />
+<meta charset="utf-8">
+
+<head>
+  <title>MY OS</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="ispinner.css" />
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      max-height: 100vh;
+      overflow: hidden;
+    }
+
+    #appicon-container {
+      overflow: visible;
+      margin-top: 40px;
+      margin-left: 5px;
+      width: 40%;
+      height: 100%;
+    }
+
+    #nameofa {
+      position: relative;
+      top: -26px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #imgclose {
+      background-color: red;
+      position: relative;
+      left: -335px;
+      width: 30px;
+      height: 25px;
+      font-size: 15px;
+    }
+
+    #screen #mycamera #mheader .appname {
+      size: 20em;
+    }
+
+    #audioplayer {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #audioplayericon {
+      margin-top: 8px;
+      margin-left: 8px;
+      display: inline-flex;
+    }
+
+    #calendar {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #calendaricon {
+      margin-top: 8px;
+      margin-left: 8px;
+      display: inline-flex;
+    }
+
+    #mybrowser {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #mybrowsericon {
+      display: inline-flex;
+      margin-left: 8px;
+      margin-top: 8px;
+    }
+
+    #videoplayer {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #videoplayericon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #myclock {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #myclockicon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #imageviewer {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #imageviewericon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #mycamera {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #mycameraicon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #calculator {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #calculatoricon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #texteditor {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #texteditoricon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #audiorecorder {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #audiorecordericon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #myterminal {
+      position: absolute;
+      z-index: 1;
+      left: 20%;
+      top: 10%;
+    }
+
+    #myterminalicon {
+      display: inline-flex;
+      margin-top: 8px;
+      margin-left: 8px;
+    }
+
+    #mheader {
+      height: 25px;
+      padding: 0px;
+      cursor: pointer;
+      z-index: 0;
+      background-color: blue;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .header {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      color: white;
+      z-index: 50;
+    }
+
+    #screen {
+      position: relative;
+    }
+
+    #time_display {
+      position: fixed;
+      top: 0%;
+      right: 0%;
+      color: Yellow;
+      z-index: 50;
+    }
+
+    #contextmenu {
+      box-shadow: 2px 2px 2px 0px rgba(143, 144, 145, 1);
+      position: absolute;
+      height: 200px;
+      opacity: 0;
+      background-color: rgb(248, 249, 250);
+      width: 163px;
+    }
+
+    body {
+      background: url(pexels-photo.jpg);
+      background-size: cover;
+    }
+
+    #taskbar {
+      position: fixed;
+      margin: 0%;
+      padding: 0%;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 40px;
+      background-color: black;
+      color: white;
+      opacity: 1;
+      z-index: 50;
+    }
+  </style>
+</head>
+
+<body onload="showbody()">
+  <div id="screen" ondrop="handlefile(event)" ondragover="return false">
+    <div id="loadingbody"></div>
+    <div id="contextmenu"></div>
+    <div id="taskbar">
+      <center>
+        <p>Taskbar</p>
+      </center>
+    </div>
+    <div class="header">
+      <center>
+        <p>MY OS</p>
+      </center>
+    </div>
+
+    <div id="mybrowser">
+      <div id="mheader"> <a onclick="mainController('mybrowser','exit')"><img id="imgclose" src="window_assets/exit.jpg"
+            width="20" height="20">
+          <p id="nameofa">My Browser</p>
+        </a></div>
+      <iframe src="apps/Browser/browser.html" width="700" height="400" frameborder="10" scrolling="no"
+        style="border:0"></iframe>
+    </div>
+    <!--<div id="myclock">
+  <div id="mheader"> <a onclick="mainController('myclock','exit')"><img id="imgclose" src="window_assets/exit.jpg" width="20" height="20"><p id="nameofa">My Clock</p></a></div>
+  <iframe src="apps/clock.html" width="500" height="400" frameborder="0" scrolling="no" style="border:0"></iframe>
+</div>-->
+    <div id="imageviewer">
+      <div id="mheader"> <a onclick="mainController('imageviewer','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>Image Viewer</b></div>
+      <iframe src="apps/imageviewer1.html" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="mycamera">
+      <div id="mheader"> <a onclick="mainController('mycamera','exit')"><img id="imgclose" src="window_assets/exit.jpg"
+            width="20" height="20"></a><b>My Camera</b></div>
+      <iframe src="apps/camera.html" width="535" height="475" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="videoplayer">
+      <div id="mheader"> <a onclick="mainController('videoplayer','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a>Video Player</b></div>
+      <iframe src="apps/videoplayer.html" width="715" height="415" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="calculator">
+      <div id="mheader"> <a onclick="mainController('calculator','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>Calculator</b></div>
+      <iframe src="apps/calculator.html" width="270px" height="420px" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="texteditor">
+      <div id="mheader"> <a onclick="mainController('texteditor','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>Text Editor</b></div>
+      <iframe src="apps/texteditor.html" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="calendar">
+      <div id="mheader"> <a onclick="mainController('calendar','exit')"><img id="imgclose" src="window_assets/exit.jpg"
+            width="20" height="20"></a><b>Calendar</b></div>
+      <iframe src="apps/calendar.html" width="330px" height="220px" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="audioplayer">
+      <div id="mheader"> <a onclick="mainController('audioplayer','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>Audio Player</b></div>
+      <iframe src="apps/audioplayer.html" width="400px" height="500px" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="audiorecorder">
+      <div id="mheader"> <a onclick="mainController('audiorecorder','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>Audio Recorder</b></div>
+      <iframe src="apps/audiorecorder.html" width="315px" height="300px" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="myterminal">
+      <div id="mheader"> <a onclick="mainController('myterminal','exit')"><img id="imgclose"
+            src="window_assets/exit.jpg" width="20" height="20"></a><b>My Terminal</b></div>
+      <iframe src="apps/myterminal.html" width="800" height="500" frameborder="0"></iframe>
+    </div>
+    <div id="appicon-container">
+      <div id="mybrowsericon">
+        <figure>
+          <a onclick="mainController('mybrowser','open')"><img style="position:relative;left:6px;"
+              src="icons/googlechrome.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>My Browser</b></figcaption>
+        </figure>
+      </div>
+      <div id="mycameraicon">
+        <figure>
+          <a onclick="mainController('mycamera', 'open')"><img style="position:relative;left:4px;"
+              src="icons/camera.jpg" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>My Camera</b></figcaption>
+        </figure>
+      </div>
+      <!-- <div id="myclockicon">
+        <figure>
+          <a onclick="mainController('myclock', 'open')"><img style="position:relative;left:2.5px;"
+              src="icons/clock.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>My Clock</b></figcaption>
+        </figure>
+      </div> -->
+      <div id="imageviewericon">
+        <figure>
+          <a onclick="mainController('imageviewer', 'open')"><img style="position:relative;left:10px;"
+              src="icons/imageviewers.jpg" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Image Viewer</b></figcaption>
+        </figure>
+      </div>
+      <div id="texteditoricon">
+        <figure>
+          <a onclick="mainController('texteditor', 'open')"><img style="position:relative;left:2px;"
+              src="icons/texteditors.jpg" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Text Editor</b></figcaption>
+        </figure>
+      </div>
+      <div id="videoplayericon">
+        <figure>
+          <a onclick="mainController('videoplayer', 'open')"><img style="position:relative;left:6px;"
+              src="icons/videoplayer.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Video Player</b></figcaption>
+        </figure>
+      </div>
+      <div id="calculatoricon">
+        <figure>
+          <a onclick="mainController('calculator', 'open')"><img src="icons/calculator.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Calculator</b></figcaption>
+        </figure>
+      </div>
+      <div id="calendaricon">
+        <figure>
+          <a onclick="mainController('calendar', 'open')"><img src="icons/calendar.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Calendar</b></figcaption>
+        </figure>
+      </div>
+      <div id="audioplayericon">
+        <figure>
+          <a onclick="mainController('audioplayer', 'open')"><img style="position:relative;left:8px;"
+              src="icons/musicplayer.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Audio Player</b></figcaption>
+        </figure>
+      </div>
+      <div id="audiorecordericon">
+        <figure>
+          <a onclick="mainController('audiorecorder', 'open')"><img style="position:relative;left:15px;"
+              src="icons/audiorecorder.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>Audio Recorder</b></figcaption>
+        </figure>
+      </div>
+      <div id="myterminalicon">
+        <figure>
+          <a onclick="mainController('myterminal','open')"><img style="position:relative;left:8px;"
+              src="icons/keyterminal.png" width="72" height="72"></a>
+          <figcaption style="text-align:center"><b>My Terminal</b></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div id="recent">
+    </div>
+    <button id="showr" onclick="showrecent()">Show</button>
+    <div id="installer">
+      <img id="insicon"></img>
+      <button id="install" onclick="installapp()">Install</button>
+      <p id="namein"></p>
+      <div id="spinner" class="ispinner ispinner--animating ispinner--gray">
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+        <div class="ispinner__blade"></div>
+      </div>
+      <p id="installing">Installing...</p>
+      <div id="exitinstall" onclick="exitinstall()">X</div>
+    </div>
+  </div>
+  <script src="jquery-1.12.4.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script>
+    var preloader = document.getElementById("loadingbody");
+    var loading = document.getElementById("spinner");
+    function showbody() {
+      preloader.style.display = 'none';
+      loading.style.display = 'none';
+    }
+    $(function () {
+      $('#mybrowser').draggable();
+      $('#myclock').draggable();
+      $('#calculator').draggable();
+      $('#texteditor').draggable();
+      $('#keyterminal').draggable();
+      $('#imageviewer').draggable();
+      $('#mycamera').draggable();
+      $('#videoplayer').draggable();
+      $('#calendar').draggable();
+      $('#audioplayer').draggable();
+      $('#audiorecorder').draggable();
+      $('#installer').draggable();
+
+      $('#mybrowsericon').draggable();
+      $('#myclockicon').draggable();
+      $('#videoplayericon').draggable();
+      $('#calculatoricon').draggable();
+      $('#texteditoricon').draggable();
+      $('#myterminalicon').draggable();
+      $('#imageviewericon').draggable();
+      $('#calendaricon').draggable();
+      $('#audioplayericon').draggable();
+      $('#audiorecordericon').draggable();
+      $('#mycameraicon').draggable();
+    });
+
+  </script>
+  <div id="time_display"></div>
+  <script src="moment.js"></script>
+  <script>
+    function mainController(id, option) {
+      if (option === "delete") {
+        var element = document.getElementById(id);
+        element.parentNode.removeChild(element);
+      }
+      if (option === "exit") {
+        var dv = document.getElementById(id);
+        dv.style.display = "none";
+      }
+      if (option === "open") {
+        var dv = document.getElementById(id);
+        dv.style.display = "block";
+      }
+      console.log("MainController Fired Status: " + option + " Object :" + id);
+    }
+    function makefs($id) {
+      var screen_width = document.getElementById('screen').offsetWidth;
+      var screen_height = document.getElementById('screen').offsetHeight;
+      dv = document.getElementById($id);
+      dv.style.width = screen_width;
+      dv.style.height = screen_height;
+    }
+    //mainController("myclock", "exit");
+    mainController("mybrowser", "exit");
+    mainController("calculator", "exit");
+    mainController("texteditor", "exit");
+    mainController("myterminal", "exit");
+    mainController("imageviewer", "exit");
+    mainController("mycamera", "exit");
+    mainController("videoplayer", "exit");
+    mainController("calendar", "exit");
+    mainController("audioplayer", "exit");
+    mainController("audiorecorder", "exit");
+  </script>
+  <script>
+    setInterval(function () {
+      var time = moment().format('h:mm:ss A') + "<br />" + moment().format('MMMM D, YYYY');
+      document.getElementById('time_display').innerHTML = time;
+    }, 1000);
+  </script>
+  <script type="text/javascript" src="create.js"></script>
+  </div>
+  </div>
+</body>
+
+</html>

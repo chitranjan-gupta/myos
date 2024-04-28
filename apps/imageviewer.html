@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    #in {
+      background-color: #FFEFD5;
+    }
+
+    #but {
+      background-color: #FFEFD5;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="output" width="500px" height="400px" />
+  </br>
+  <input id="in" type="file" accept="image/*" onchange="loadFile(event)"
+    style="position:absolute;width:200px;height:24px;z-index:4;"></br><button id="but" onclick="reload()"
+    style="position:absolute;width:100px;height:24px;z-index:4;">Reload</button>
+  <script>
+    var loadFile = function (event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+    };
+
+    function reload() {
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>
